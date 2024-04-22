@@ -1,6 +1,6 @@
 export const fetchChicken = async () => {
     try {
-      const response = await fetch("https://kaydas-backend.onrender.com/chicken");
+      const response = await fetch("http://localhost:3002/chicken");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

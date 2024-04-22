@@ -1,6 +1,6 @@
 export const fetchWholesale = async () => {
     try {
-      const response = await fetch("https://kaydas-backend.onrender.com/wholesale");
+      const response = await fetch("http://localhost:3002/wholesale");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
