@@ -1,0 +1,93 @@
+.contactUs{
+    display: flex;
+    gap: 100px;
+    margin: 50px auto;
+}
+.contactRight{
+    width: 400px;
+    margin-left: 100px;
+}
+.contactRight h2{
+    color: #360AFF;
+    font-size: 35px;
+    font-weight: 600;
+}
+.contactRight h4{
+    color: #360AFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+.contactRight span{
+display: block;
+font-size: 12px;
+padding: 4px;
+}
+.contactLeft{
+   margin-left: 150px;
+}
+.contactLeft img{
+    border: none;
+    border-radius: 15px;
+}
+.contactForm{
+    display: block;
+    width: 300px;
+    padding: 10px;
+}
+.contactForm input, textarea{
+    width: 100%;
+    height: 30px;
+    border:0.5px solid #360AFF;
+    border-radius: 8px;
+}
+.contactForm label{
+    font-size: 12px;
+    font-weight: 500;
+}
+.contactForm  textarea{
+    margin-top: 20px;
+}
+.contactUs p{
+    font-size: 13px;
+    width: 300px;
+}
+.contactLine{
+    border-bottom: 1.5px solid;
+}
+.contactImgTwo{
+    width: 100%;
+    align-self: center;
+   margin-top: 170px;
+}
+.contactArrow{
+    margin-top:30px ;
+}
+
+@media screen and (max-width: 768px) {
+    .contactUs {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contactRight,
+    .contactLeft {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contactLeft {
+        margin-top: 20px; 
+       
+    }
+    .contactLeft img{
+        width: 100%;
+        align-self: center;
+    }
+    .contactArrow{
+        display:none;
+        
+    }
+}

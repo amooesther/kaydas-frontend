@@ -1,0 +1,314 @@
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #f6f5ff;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLogo p {
+  color: #171717;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navMenu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.newLoginCart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.newLoginCart button {
+  width: 157px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  background: #360aff;
+  cursor: pointer;
+}
+
+.newLoginCart button:active {
+  background: #f3f3f3;
+}
+
+.cartCount {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+}
+
+Link {
+  text-decoration: none;
+}
+
+.user {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user button {
+  width: 103px;
+  height: 34px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: #360aff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.userAvatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #360aff;
+}
+
+.userAvatar img {
+  margin-left: 4px;
+  margin-top: 2px;
+}
+.userBtn{
+font-size:14px !important;
+width: auto !important;
+}
+/* Responsive styles */
+@media only screen and (max-width: 1024px) {
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(5% ); 
+    Right: 1px;
+    background-color: #f6f5ff;
+    width: 100px; 
+    box-shadow: 0 1px 3px -2px black;
+  }
+
+  .navMenu.active {
+    display: flex;
+  }
+
+  .toggleButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    
+  }
+
+  .toggleButton span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: transform 0.4s ease;
+  }
+
+  .toggleButton.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .toggleButton.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggleButton.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .newLoginCart img,
+  .cartCount,
+  .userAvatar
+   {
+    display: none;
+  }
+  .userBtn{
+    display: block;
+      }
+    
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(5%); 
+    right: 75px;
+    background-color: #f6f5ff;
+    width: 100px; 
+    box-shadow: 0 1px 3px -2px black;
+  }
+
+  .navMenu.active {
+    display: flex;
+  }
+
+  .toggleButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative; 
+  }
+
+  .toggleButton span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: transform 0.4s ease;
+  }
+
+  .toggleButton.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .toggleButton.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggleButton.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .newLoginCart img,
+  .cartCount,
+  .userAvatar
+  {
+    display: none;
+  }
+  .userBtn{
+display: block;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(5% ); 
+    right: 3px;
+    background-color: #f6f5ff;
+    width: 100px; 
+    box-shadow: 0 1px 3px -2px black;
+  }
+
+  .navMenu.active {
+    display: flex;
+  }
+  
+  .toggleButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative; 
+  }
+
+  .toggleButton span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 0;
+    transition: transform 0.4s ease;
+  }
+
+  .toggleButton.active span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+  .toggleButton.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggleButton.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+  .newLoginCart button {
+    width: 130px;
+    font-size: 16px;
+  }
+
+  .user button {
+    width: 90px;
+    font-size: 14px;
+  }
+
+  .navLogo p {
+    font-size: 22px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 480px) {
+  .toggleButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative; 
+    top: 15px;
+  }
+  
+  .newLoginCart button {
+    width: 57px;  
+    font-size: 15px;
+    position: absolute;
+   right: 20px;
+   top: 40px;
+   padding: 2px;
+   height: 30px;
+  }
+  .userBtn{
+    display: block;
+      }
+    
+}

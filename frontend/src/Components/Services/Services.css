@@ -1,0 +1,145 @@
+
+
+.serviceWrapper {
+   height: 1072px;
+   width: 100vw;
+   background-color: #f6f5ff;;
+   justify-content: center;
+   align-items: center;
+   margin: 50px auto;
+}
+  
+  .serviceOne {
+    text-align: center;
+    padding: 20px;
+   
+   
+  }
+  
+.btnServices{
+    padding: 10px 20px;
+    width: 166px;
+    font-weight: 600;
+    color: #360AFF;
+    border: 1px solid #360AFF;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.serviceTwo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 95px;
+  }
+  
+  .serviceTwo div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 310px;
+    height: 300px;
+    border: 1px solid #360AFF;
+    border-radius: 20px;
+    padding: 20px;
+   
+  }
+  
+  .serviceTwo img {
+    width: 50%;
+   height: 110px;
+    align-self: flex-start;
+  }
+  .serviceTwo h3{
+    
+    font-size: 20px;
+    color:  #360AFF;
+    font-weight: 500;
+  }
+
+  .serviceTwo {
+    
+    font-size: 16px;
+    font-weight: 400;
+  }
+  /* Responsive styles */
+@media (max-width: 768px) {
+  .serviceWrapper {
+    height: auto;
+    padding: 20px;
+  }
+
+  .serviceOne {
+    padding: 10px;
+  }
+
+  .btnServices {
+    width: 70%;
+    margin: 10px 0;
+  }
+
+  .serviceTwo {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .serviceTwo div {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .serviceTwo img {
+    width: 60%;
+    height: auto;
+  }
+
+  .serviceTwo h3 {
+    font-size: 18px;
+  }
+
+  .serviceTwo p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .serviceWrapper {
+    height: auto;
+    padding: 10px;
+  }
+
+  .serviceOne {
+    padding: 10px;
+  }
+
+  .btnServices {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .serviceTwo {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+
+  .serviceTwo div {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .serviceTwo img {
+    width: 60%;
+    height: auto;
+  }
+
+  .serviceTwo h3 {
+    font-size: 18px;
+  }
+
+  .serviceTwo p {
+    font-size: 14px;
+  }
+}

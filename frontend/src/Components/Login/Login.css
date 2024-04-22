@@ -1,0 +1,105 @@
+
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  .loginPage {
+    width: 300px;
+    padding: 20px;
+    background-color: #f6f5ff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loginPage img{
+margin-left: 60px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form label {
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #360AFF;
+  }
+  
+  .form input {
+    padding: 10px 20px;
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    width: 290px;
+    font-weight: 600;
+    background-color: #360AFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  
+  } 
+  .btnSignUp{
+    padding: 10px 20px;
+    width: 290px;
+    font-weight: 600;
+    background-color: white;
+    color: #360AFF;
+    border: 1px solid #360AFF;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  } 
+  
+  
+  .form button.btn:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  .error {
+    color: red;
+    font: 5px;
+    display: block;
+  }
+  
+ 
+  @media only screen and (min-width: 600px) {
+    .loginImg {
+      margin-left: 0; 
+      width: 50%;
+      height: 50%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 768px) {
+    .formContainer {
+      padding: 50px; 
+    }
+  }
+  
+
+  @media only screen and (min-width: 992px) {
+    .loginPage {
+      max-width: 500px;
+    }
+  }
+  
+  
+  

@@ -1,0 +1,247 @@
+.discountTop{
+    padding-left: 160px;
+    margin-bottom: 40px;
+}
+.discountTop h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+.discountTop p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.discountTopOne{
+    display: flex;
+    gap: 20px;
+}
+.discountTop button{
+    width: 150px;
+    height: 40px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    
+}
+.discounts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.discountOne{
+    width: 300Px;
+    height: 500px;
+    border: 1px solid #805B5B;
+    border-radius: 48px;
+}
+.image{
+    width: 250px;
+    height: 230px;
+    border-bottom: 5px solid #805B5B;
+}
+.discountTwo{
+    width: 90%;
+    margin: 50px auto;
+   
+}
+.discountThree{
+    display: flex;
+}
+
+.discountThree span{
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+}
+.discountThree span:last-child{
+    color: #9080D9;
+    font-weight: 600;
+   
+}
+.discountThree span:nth-child(2){
+  text-decoration: line-through;
+}
+.discountThree span:first-child{
+    font-size: 10px;
+    font-weight: 600;
+}
+.topDiscountFour{
+    margin-left: 125px;
+}
+
+/* Base styles */
+.discountTop {
+    padding-left: 160px;
+    margin-bottom: 40px;
+  }
+  
+  .discountTop h2 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  .discountTop p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .discountTopOne {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .discountTop button {
+    width: 150px;
+    height: 40px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .discounts {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .discountOne {
+    flex: 1; 
+    max-width: 300px; 
+    height: 500px;
+    border: 1px solid #805B5B;
+    border-radius: 48px;
+  }
+  
+  .image {
+    width: 250px;
+    height: 230px;
+    border-bottom: 5px solid #805B5B;
+  }
+  
+  .discountTwo {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .discountTwo img{
+    width: 250px;
+    height: 200px;
+    border: 3px solid #805B5B;
+  }
+  .discountThree {
+    display: flex;
+  }
+  
+  .discountThree span {
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  
+  .discountThree span:last-child {
+    color: #9080D9;
+  }
+  
+  .discountThree span:first-child {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  
+  .topDiscountFour {
+    margin-left: 125px;
+  }
+  
+ 
+  @media only screen and (max-width: 768px) {
+    .discountTop {
+      padding-left: 80px;
+      width: 70%;
+    }
+  
+    .discountOne {
+      max-width: 350px;
+    }
+  
+    .image {
+      width: 200px;
+      height: 180px;
+    }
+  
+    .topDiscountFour {
+      margin-left: 125px;
+    }
+    .discountTopOne{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .discountTop {
+      padding-left: 40px;
+    }
+  
+    .discountOne {
+      max-width: 300px;
+    }
+  
+    .image {
+      width: 150px;
+      height: 130px;
+    }
+  
+    .topDiscountFour {
+      margin-left: 100px;
+    }
+  
+    .discountTop h2 {
+      font-size: 25px;
+    }
+  
+    .discountTop p {
+      font-size: 10px;
+    }
+  
+    .discountTop button {
+      width: 120px;
+      height: 30px;
+      font-size: 12px;
+    }
+  
+    .discountThree span:first-child {
+      font-size: 8px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+   
+    .discountTop {
+      padding-left: 80px;
+    }
+  
+    .discountOne {
+      max-width: 300px;
+    }
+  .discountTwo image{
+    margin-left: 25px;
+    width: 300px;
+    height: 180px;
+  }
+    .image {
+      width: 300px;
+      height: 180px;
+     
+    }
+  
+    .topDiscountFour {
+      margin-left: 125px;
+    }
+  }

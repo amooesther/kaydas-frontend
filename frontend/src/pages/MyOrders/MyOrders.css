@@ -1,0 +1,27 @@
+.myOrders{
+    display: flex;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+.cartItems{
+    margin-top:50px ;
+    margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+    .cartItems{
+        margin-top:20px ;
+    }
+ 
+    .myOrders{
+        display: flex;
+        gap: 30px;
+    }
+    .hamburger-menu-small{
+        height: 30px;
+    }
+    
+      
+}

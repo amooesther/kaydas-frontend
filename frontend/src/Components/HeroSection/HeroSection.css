@@ -1,0 +1,192 @@
+.heroWrapper{
+    width: 1011px;
+    height: 722px;
+    margin: 50px auto;
+       
+}
+.heroOne{
+    
+    height: 370px;
+   margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.heroText{
+   width: 70%;
+   margin: auto;
+   font-size: 40px;
+ 
+}
+.heroText span{
+    color: #360AFF;
+}
+
+.inputWrapper{
+   width: 550px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   margin: auto;
+   padding-top: 20px;
+}
+.searchWrapper input {
+    width: 250px;
+    height: 35px;
+    border-color: #360AFF;
+    border-radius: 8px;
+    background-image: url('../../Assets/microphone.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    padding-right: 40px; 
+    position: relative;
+    right: 25px;
+  
+   
+  }
+  .searchInput::placeholder{
+    padding-left: 30px; 
+    padding-right: 30px; 
+    text-align: center; 
+    font-size: 10px;
+    font-weight: 300;
+  }  
+  .search {
+    position: absolute; 
+    padding-top: 10px;
+    left: 345px; 
+    width: 20px; 
+    height: 20px; 
+    z-index: 1; 
+  }
+  
+.searchButton{
+    width: 166px;
+    height: 45px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    
+}
+.heroTwo{
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+}
+.heroTwo div{
+    width: 308px;
+    height: 307px;
+    border-radius: 24px;
+    
+}
+
+@media (max-width: 1200px) {
+    .heroWrapper {
+      width: 90%;
+      height: auto;
+      margin: 30px auto;
+    }
+  
+    .heroText {
+      font-size: 40px;
+    }
+  
+    .inputWrapper {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroText {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  
+    .searchWrapper input {
+      width: 150px;
+      margin-bottom: 10px;
+      margin-left: 45px;
+    }
+  
+    .searchButton {
+      width: 130px;
+      height: 40px;
+      font-size: 14px;
+      margin-left: 45px;
+    }
+  
+    .heroTwo {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    
+      margin-top: 70px;
+    }
+  
+    .heroTwo div {
+      width: calc(100% - 15px); 
+      height: auto; 
+
+      }
+  }
+  @media (max-width: 768px) {
+    .heroWrapper {
+      width: 90%;
+      height: auto;
+      margin: 30px auto;
+    }
+  
+    .heroText {
+      font-size: 30px;
+    }
+  
+    .inputWrapper {
+      width: 80%;
+    }
+  
+    .searchWrapper input {
+      width: 250px;
+    }
+  
+    .searchButton {
+      width: 130px;
+      height: 40px;
+      font-size: 14px;
+    }
+    
+  
+    .heroTwo {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-left: 70px;
+      margin-top: 70px;
+    }
+  
+    .heroTwo div {
+      width: calc(100% - 15px); 
+      height: auto; 
+
+      }
+  }
+  @media only screen and (max-width: 667px) {
+    .heroTwo {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 120px;
+      margin-left: 10px;
+    }
+  
+    .heroTwo div {
+      width: calc(100%-10px );
+      height: auto;
+    }
+  }

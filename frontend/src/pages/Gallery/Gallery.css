@@ -1,0 +1,48 @@
+.galleryWrapper{
+   
+    margin-top: 40px;
+    gap: 10px;
+}
+.galleryWrapper input{
+    width: 450px;
+    height: 40px;
+    border: 0.5px solid #360AFF;
+    border-radius: 8px;
+    margin-right: 25px;
+    margin-top: 17px;
+}
+.galleryForm{
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .galleryWrapper {
+        
+        margin-left: 20%;
+    }
+    .galleryWrapper input{
+        width: 250px;
+        height: 40px;
+        border: 0.5px solid #360AFF;
+        border-radius: 8px;
+      
+    }
+    .galleryBtn{
+        margin-left: 40px;
+    }
+    .galleryForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .galleryWrapper input{
+        width: 60%;
+        
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .galleryWrapper {
+        margin-left: 30%; 
+    }
+}

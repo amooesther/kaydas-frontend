@@ -1,0 +1,200 @@
+.cardOne{
+    text-align: end;
+    margin-right: 70px;
+}
+.cardOne p:first-child{
+    color: #2000b2;
+    font-weight: 600;
+    margin-right: 45px;
+}
+.cardOne p:last-child{
+    color: #360AFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+.cardOne span{
+    font-size: 10px;
+}
+.cardTwo{
+    width: 1100px;
+    margin: auto;
+}
+.cardThree{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #bdbdbd;
+    padding: 20px;
+}
+.cardThree input{
+    border: none;
+    outline: none;
+    width: 300px;
+    padding: 10px;
+}
+.cardThree input::placeholder{
+    color: #bdbdbd;
+    font-size: 12px;
+}
+.cardThree label{
+    color: #939393;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.cardThree img{
+    width: 20px;
+    height: 20px;
+}
+.cardFour{
+   width: 1100px;
+   margin: auto;
+   display: flex;
+   border: 1px solid #bdbdbd;
+   height: 80px;
+}
+.line{
+    border-right: 1px solid #bdbdbd;
+    height: 80px;
+    margin-left: 400px;
+}
+.cards{
+    padding:30px;
+}
+.cards input{
+    border: none;
+    outline: none;
+   
+
+}
+.img{
+    margin-left: 400px;
+}
+.cards input::placeholder{
+    color: #bdbdbd;
+    font-size: 12px;
+}
+.cards label{
+    color: #939393;
+    font-size: 13px;
+    
+}
+
+  
+  .toggle input {
+    background-color: blue;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+   
+  }
+  .toggles{
+    display: flex;
+   justify-content: space-between;
+   margin-left: 70px;
+   margin-right: 70px;
+   
+  }
+  .toggles h3{
+    color: #939393;
+    font-size: 28px;
+  }
+  .payButton{
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 400px;
+  }
+  .payButton button{
+    background-color: #2000b2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+  }
+  .payButton span:first-child{
+    font-size: 12px;
+  }
+  .payButton span:last-child{
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .changePayment{
+  margin-left: 500px;
+  color: #2000b2 ;
+  font-weight: 500;
+  }
+  .changePayment button{
+    margin-left: 50px;
+    color: #bdbdbd;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+
+  @media (max-width: 1200px) {
+    .cardTwo,
+    .cardFour {
+      width: 80%;
+      max-width: 800px;
+    }
+  
+    .img {
+      margin-left: 20%;
+    }
+  
+    .toggles,
+    .payButton,
+    .changePayment {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .cardThree {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .line {
+      display: none;
+    }
+  .crd{
+    display: none;
+  }
+    .cards {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .img {
+      margin-left: 20%;
+      width: 70%;
+      height: 70%;
+    }
+  
+    .payButton {
+      width: 80%;
+      margin-left: 10%;
+    }
+  
+    .changePayment {
+      margin-left: 20%;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .cardThree input,
+    .cards input {
+      width: 100%;
+    }
+  }

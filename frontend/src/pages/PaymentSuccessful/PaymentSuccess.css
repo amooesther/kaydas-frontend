@@ -1,0 +1,67 @@
+.successPay{
+    margin-left: 500px;
+}
+.successPay p{
+    width: 220px;
+    margin-left: 20px;
+}
+.successPay h3{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.success img{
+   height: 400px;
+    width: 700px;
+    margin-left: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .success img {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+    
+    .successPay {
+      margin-left: 20px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .success img {
+      width: 70%;
+      height: auto;
+      margin-left: 15%;
+    }
+    
+    .successPay {
+      margin-left: 10%;
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .success img {
+      width: 60%;
+      height: auto;
+      margin-left: 20%;
+    }
+    
+    .successPay {
+      margin-left: 20%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1200px) {
+    .success img {
+      width: 50%;
+      height: auto;
+      margin-left: 25%;
+    }
+    
+    .successPay {
+      margin-left: 25%;
+    }
+  }

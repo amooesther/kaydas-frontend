@@ -1,0 +1,69 @@
+.ScheduleWrapper{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 30px auto;
+   width: 450px;
+  
+
+}
+
+.scheduleTop{
+   width: 500px;
+  
+
+}
+.scheduleTop h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.scheduleTop p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.formTop{
+    display: flex;
+    margin-bottom: 0px;
+    
+}
+.formTop input{
+    width: 180px ;
+    
+}
+.formsWrapper{
+    width: 400px ;
+    
+  
+    
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+}
+.ScheduleWrapper label{
+    font-size: 14px;
+    color: #798686;
+    font-weight: 600;
+}
+.check{
+    display: flex;
+    
+}
+.check label{
+    font-size: 8px ;
+    margin-top: 9px;
+}
+.check span{
+    color: #360AFF;
+    cursor: pointer;
+}
+.formsWrapper input{
+    padding: 5px ;
+    height: 22px;   
+}
+.membership{
+    height: 30px;
+}
+.scheduleBtn{
+   margin-left: 150px;
+}

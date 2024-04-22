@@ -1,0 +1,284 @@
+.subscriptionWrapper {
+    width: 1200px;
+    height: 285px;
+    background-color: #f6f5ff;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    border: 1px solid;
+    
+  }
+  .subscriptionWrapper h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  .sub {
+    display: flex;
+   
+  }
+  
+  .subLeft {
+    display: flex;
+    margin-left: 60px;
+  }
+  
+  .btnWrapper {
+    width: 92px;
+  }
+  
+  .subOne {
+    width: 154px;
+    height: 180px;
+    
+  }
+  
+  .subTwo {
+    border: 1px solid;
+    width: 90px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .subTwo img {
+    position: absolute;
+    left: 2px;
+    top: 4.5px;
+  }
+  
+  .subOne p {
+    font-size: 12px;
+  }
+  
+  .subRight {
+    display: flex;
+    margin-left: 300px;
+    align-items: center; 
+  }
+  
+  .verticalLine {
+    border-left: 1px solid black;
+    height: 185px;
+    margin-left: 100px;
+  }
+  .carouselWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .carouselWrap{
+    width: 280px;
+    height: 550px;
+    padding: 15px;
+    background-color: white;
+    border: 0.5px solid #eeebeb;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .carouselWrap h3{
+   font-size: 28px;
+   font-weight: 400;
+  }
+  .carouselWrap p {
+    font-size: 12px;
+    width: 250px;
+    font-weight: 400;
+   
+   }
+   .carouselWrap  span {
+    font-size: 13px;
+    font-weight: 300;
+    display: block;
+    padding: 5px;
+   
+   
+   }
+   .span {
+    color: #360AFF;
+    font-weight: 600 !important;
+    margin-top: 10px;
+}
+
+
+   .carouselBtnWrapper{
+    display: flex;
+    gap: 15px;
+   
+   }
+   .buttonWrap{
+    width: 84px;
+    height: 29px;
+
+   }
+   .arrowWrapper{
+    margin-top: 20px;
+   }
+   .arrowWrapper p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+  
+   }
+   .arrowUpBtn{
+    display: flex;
+   gap: 20px;
+   justify-content: center;
+    align-items: center;
+   }
+
+   .carouselWrap h2 {
+   color: #798686;
+   font-size: 24px; 
+   background-color: #efecec;
+   height: 45px;
+   border-radius: 10px;
+  }
+  
+  .carouselWrap h2.active {
+    
+    color: white; 
+    font-size: 24px; 
+    background-color: #2000B2;
+    height: 45px;
+   border-radius: 10px;
+  }
+ 
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .subscriptionWrapper {
+    height: auto; 
+  
+    width: 80%;
+  }
+
+  .sub {
+    flex-direction: column;
+  }
+
+  .subLeft,
+  .subRight {
+    display: flex;
+    flex-direction: column;
+    margin: auto; 
+  
+
+  }
+  .subLeft{
+    margin-right: 250px;
+    padding: 13px;
+  }
+
+  .subLeft,
+  .subRight p{
+    width: 150px;
+  }
+ 
+  .deliveryGuy{
+      margin-left: 0px;
+  }
+  .subLeft {
+    margin-bottom: 20px; 
+  }
+.subRight{
+  margin-right: 250px;
+  
+}
+  .subOne {
+    width: 80%; 
+   
+  }
+
+  
+.carouselWrap h2{
+  width: 80%;
+}
+  .verticalLine {
+    display: none; 
+  }
+
+  .carouselWrapper {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .carouselWrap {
+    width: 80%; 
+    max-width: 80%; 
+    height: auto; 
+    padding: 15px;
+    margin-bottom: 20px; 
+  }
+
+  .carouselWrap h3 {
+    font-size: 24px; 
+  }
+
+  .carouselWrap p {
+    font-size: 11px; 
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+  .subscriptionWrapper {
+    height: auto; /* Adjust height as needed */
+    padding: 60px;
+    width: 80%; /* Add padding for better spacing */
+  }
+
+  .sub {
+    flex-direction: row;
+    width: 80%; /* Revert to horizontal layout for sub elements */
+  }
+
+  .subLeft,
+  .subRight {
+    margin: 0 20px;
+   
+  }
+  .subRight p{
+    width: 50%;
+  }
+
+  .subOne {
+    width: 154px; /* Restore original width for subOne */
+  }
+
+  .subTwo {
+    margin: 0; /* Remove margin from subTwo */
+  }
+
+  .verticalLine {
+    display: block; /* Display vertical line for medium screens */
+  }
+
+  .carouselWrapper {
+    flex-direction: row; 
+    gap: 10px; 
+    width: 80%;
+  }
+
+  .carouselWrap {
+    width: 90%; 
+    height: auto; 
+    margin-bottom: 0; 
+  }
+
+  .carouselWrap h3 {
+    font-size: 18px; 
+  }
+
+  .carouselWrap p {
+    font-size: 12px; 
+  }
+}
+

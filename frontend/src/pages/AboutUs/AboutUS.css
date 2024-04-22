@@ -1,0 +1,74 @@
+/* Default styles */
+.aboutUs {
+    width: 1080px;
+    margin-bottom: 40px; /* Added margin between 'aboutUs' and 'about' */
+}
+
+.aboutUS h1 {
+    font-size: 35px;
+    font-weight: 600;
+    /* margin-left: 20px; */
+    background-color: #360AFF; 
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+.aboutOne {
+    display: flex;
+    gap: 50px; /* Increased gap between 'about' sections */
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    width: 442px;
+    margin-top: 30px; /* Added margin between 'aboutUs' and 'about' */
+}
+
+.about h2 {
+    color: #360AFF;
+}
+
+.aboutTwo {
+    display: flex;
+    gap: 50px; /* Increased gap between 'about' sections */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .aboutUs {
+        width: 90%;
+        margin-bottom: 20px; /* Adjusted margin between 'aboutUs' and 'about' */
+    }
+
+    .about {
+        width: 90%;
+        margin-top: 20px; /* Adjusted margin between 'aboutUs' and 'about' */
+    }
+
+    .about p {
+        width: 100%;
+       
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .about h2 {
+        text-align: center;
+       
+        
+    }
+
+    .aboutOne, .aboutTwo {
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    .aboutOne > .about + .about {
+        margin-top: 10px;
+    }
+}

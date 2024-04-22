@@ -1,0 +1,115 @@
+
+
+.paystack{
+    display: flex;
+    gap: 20px;
+    height: 40px;
+}
+ .paystack p{
+    color: #360AFF;
+    font-weight: 500;
+
+ }
+ .paystack img{
+    margin-top: 15px;
+ }
+ .logo{
+    width: 120px;
+    height: 40px;
+    background-color: #EBEBEB;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+ }
+ .payStackWrapOne{
+    margin: 30px;
+    align-items: center;
+ }
+ .payStackWrap{
+    display: flex;
+    justify-content: space-between;
+ }
+ .payStackWrapTwo{
+   margin: 30px;
+ }
+ .payStackWrapTwo p:first-child{
+   color: red;
+   font-weight: 600;
+   margin-bottom: 10px;
+ }
+ .payStackWrapTwo p:nth-child(2){
+   color: #2000B2;
+   font-weight: 600;
+   font-size: 14px;
+ }
+ .payStackWrapTwo p:last-child{
+   color: #360AFF;
+   font-size: 12px;
+
+ }
+ .payStackWrapTwo span{
+  font-size: 10px;
+ }
+ .paymentWrap {
+   margin-left: 30px;
+   margin-bottom: 50px;
+ }
+ .paymentWrap img{
+   height: 18px;
+   width: 18px;
+   margin-top: 12px;
+   margin-left: 15px;
+ }
+ .paymentWrap h2{
+   color: #2000B2;
+   font-weight: 700;
+   font-size: 30px;
+ }
+
+ .paymentWrap p{
+   color: #2000B2;
+   font-size: 14px;
+   font-weight: 600;
+ }
+
+ .pay{
+   display: flex;
+   gap: 20px;
+   height: 60px;
+   width: 1120px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+   cursor: pointer;
+   border-radius: 10px;
+ }
+
+ .pay:hover {
+   background-color: #ebebeb; 
+ }
+ 
+ @media screen and (max-width: 768px) {
+  .payStackWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paystack{
+    width: 80%;
+  }
+
+  .paymentWrap {
+    margin-left: 0;
+  }
+  .logo{
+    display: none;
+  }
+  .pay {
+    width: calc(70% - 30px); 
+    margin-left: 45px;
+    margin-right: 15px;
+  }
+  .paymentWrap h2{
+    font-size: 17px;
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,135 @@
+.cartItemsWrapper{
+    background-color: #f6f5ff;
+    display: flex;
+   padding-right: 25px; 
+    gap: 300px;
+    box-shadow: 0 2px 4px rgba(246, 245, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.cartIt{
+    display: flex;
+    gap: 40px;
+}
+.cartIt img{
+    height: 110px;
+    width: 120px;
+}
+.cartItText p{
+font-size: 13px;
+font-weight: 600;
+}
+.cartItText span{
+    font-size: 13px;
+    color: #939393;
+    font-weight: 400;
+}
+.cartItSpan {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+ }
+ .cartItSpan span:first-child{
+    text-decoration: line-through;
+    font-size:13px ;
+ }
+ .cartItSpan span:last-child{
+    background-color:#d2c1c1;
+    width: 30px;
+    color: #360AFF;
+    font-weight: 500;
+ }
+ .cartsItOne{
+    width: 80px;
+    height: 32px;
+    padding: 0px 4px 0px 4px;
+    color: white;
+    background-color: #328FE6;    
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+ }
+ .cartsItOne p{
+    padding-top: 7px;
+    font-size: 13px;
+    font-weight: 600;
+ }
+.cartsIts{
+    display: flex;   
+    gap: 10px;
+}
+.cartsIts img{   
+    height: 16px;
+    width: 12px;
+    margin-top: 10px;
+}
+.cartsIts p{
+    font-size: 12px;
+    color: #360AFF;
+}
+.availability{
+    color: #FB0909 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    background-color: transparent !important;
+    width: 100px !important;
+    text-decoration: none !important;
+}
+.close{
+    height: 16px !important;
+    width: 16px !important;
+    margin-right: 0px;
+}
+.notAvailable{
+    padding-top: 70px;
+ 
+   
+}
+.cartsItsTwo{
+    display: flex;   
+    gap: 10px;
+    
+  
+
+}
+.cartsItsTwo img{   
+    height: 16px;
+    width: 12px;
+    margin-top: 10px;
+   
+}
+.cartsItsTwo p{
+    font-size: 12px;
+    color: #360AFF;
+}
+
+@media screen and (max-width: 768px) {
+    .cartItemsWrapper {
+        flex-direction: column;
+        padding-right: 0;
+        gap: 10px;
+        width: 80%;
+        
+    }
+    .cartItText p{
+        font-size: 11px;
+        font-weight: 600;
+        }
+        .cartIt{
+            display: flex;
+            gap: 10px;
+        }
+        .cartItSpan {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-direction: column;
+         }
+         .close{
+            display: none;
+        }
+        .availability{
+            width: 60px !important;
+        }
+}

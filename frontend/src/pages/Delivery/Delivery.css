@@ -1,0 +1,237 @@
+
+.deliveryOne{
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    
+}
+.deliveryOne img{
+    height: 40px;
+    margin-top: 20px;
+}
+.deliveryOne h1{
+    color: #daacac;
+    font-size: 25px;
+  
+
+}
+.deliveryMap{
+    width: 100vw;
+    height: 400px;
+}
+.deliveryTwo{
+    display: flex;
+    gap: 800px;
+    justify-content: center;
+
+}
+.deliveryTwo h3{
+    color: #360AFF;
+}
+.deliveryThree{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #E6EAEE;
+    margin-left: 130px;
+}
+.deliveryThree h3{
+    color: #360AFF;
+}
+.deliveryThree p{
+    font-size: 14px;
+    width: 350px;
+}
+.deliveryThreeTwo{
+    width: 60%;
+}
+
+.deliveryFour{
+    margin-left: 500px;
+    width: 250px;
+   padding: 15px;
+   
+   
+}
+.deliveryFour p {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container .radio-inner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #360AFF;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked + .radio-inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #360AFF;
+}
+
+.deliveryFour label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.deliveryBtn {
+  width: 300px;
+  padding: 10px;
+  background-color: #360AFF;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .deliveryOne {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .deliveryOne img {
+    margin-top: 10px;
+  }
+
+  .deliveryOne h1 {
+    font-size: 20px;
+  }
+
+  .deliveryMap {
+    width: 70vw;
+  }
+
+  .deliveryTwo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deliveryTwo h3 {
+    font-size: 16px;
+    margin-right: 100px;
+  }
+
+  .deliveryThree {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 70vw;
+    margin-left: 0;
+  }
+
+  .deliveryThree p {
+    width: 50vw;
+  }
+
+  .deliveryFour {
+    margin-left: 0;
+    width: 70vw;
+    padding: 5px;
+  }
+
+  .deliveryFour p {
+    font-size: 11px;
+  }
+
+
+
+  .deliveryBtn {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Your existing CSS for responsiveness from 728px to 1024px */
+
+  /* Additional CSS for screens up to 1024px */
+  .deliveryOne {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .deliveryOne img {
+    margin-top: 10px;
+  }
+
+  .deliveryOne h1 {
+    font-size: 20px;
+  }
+
+  .deliveryMap {
+    width: 70vw;
+  }
+
+  .deliveryTwo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deliveryTwo h3 {
+    font-size: 16px;
+    margin-right: 100px;
+  }
+
+  .deliveryThree {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 70vw;
+    margin-left: 0;
+  }
+
+  .deliveryThree p {
+    width: 50vw;
+  }
+
+  .deliveryFour {
+    margin-left: 0;
+    width: 70vw;
+    padding: 5px;
+  }
+
+  .deliveryFour p {
+    font-size: 11px;
+  }
+
+  .deliveryBtn {
+    width: 70vw;
+  }
+}
