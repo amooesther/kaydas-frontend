@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenItems.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'; // Import useDispatch
+import { addToCart } from '../../pages/Cart/CartSlice.js'; // Import addToCart action
 import { fetchChickenPart } from '../../ApiRequests/chickenPart.js';
 
 const ChickenItems = () => {
   const [chickenItems, setChickenItems] = useState([]);
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1); 
 
   useEffect(() => {
     const fetchChickenItems = async () => {
@@ -23,6 +27,10 @@ const ChickenItems = () => {
 
     fetchChickenItems();
   }, []);
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart({ ...item, quantity: parseInt(quantity, 10) }));
+};
 
   const renderChickenItems = () => {
     return chickenItems.map((item) => (
@@ -53,9 +61,9 @@ const ChickenItems = () => {
               </div>
             </Link>
             <div>
-              <Button variant='tertiaryTwo' size='small'>
+              <button onClick={() => handleAddToCart(item)} className='addToCartBtn'>
                 Add to cart
-              </Button>
+              </button>
             </div>
           </div>
         </div>

@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenWhole.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'; // Import useDispatch
+import { addToCart } from '../../pages/Cart/CartSlice.js'; // Import addToCart action
 import { fetchWhole } from '../../ApiRequests/whole.js';
 
 const ChickenWhole = () => {
   const [wholeItems, setWholeItems] = useState([]);
-
+  const dispatch = useDispatch(); 
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     const fetchWholeItems = async () => {
       try {
@@ -23,6 +26,10 @@ const ChickenWhole = () => {
 
     fetchWholeItems();
   }, []);
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart({ ...item, quantity: parseInt(quantity, 10) }));
+};
 
   const renderWholeItems = () => {
     return wholeItems.map((item) => (
@@ -53,9 +60,9 @@ const ChickenWhole = () => {
               </div>
             </Link>
             <div>
-              <Button variant='tertiaryTwo' size='small'>
+              <button onClick={() => handleAddToCart(item)} className='addToCartBtn'>
                 Add to cart
-              </Button>
+              </button>
             </div>
           </div>
         </div>

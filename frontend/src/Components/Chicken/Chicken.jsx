@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenItems.css';
-import { Link } from 'react-router-dom';
-import { fetchChicken } from '../../ApiRequests/chicken.js'; // Import the fetchChicken function
+import { Link, } from 'react-router-dom';
+import { useDispatch } from 'react-redux'; 
+import { addToCart } from '../../pages/Cart/CartSlice.js';
+import { fetchChicken } from '../../ApiRequests/chicken.js';
 
 const Chicken = () => {
     const [chickenItems, setChickenItems] = useState([]);
+    const dispatch = useDispatch();
+    const [quantity, setQuantity] = useState(1);
+   
 
     useEffect(() => {
         const fetchChickenItems = async () => {
             try {
-                const data = await fetchChicken(); // Use the fetchChicken function
+                const data = await fetchChicken();
                 if (data && data.chicken && Array.isArray(data.chicken)) {
                     setChickenItems(data.chicken);
                 } else {
@@ -23,6 +28,11 @@ const Chicken = () => {
 
         fetchChickenItems();
     }, []);
+
+    
+    const handleAddToCart = (item) => {
+        dispatch(addToCart({ ...item, quantity: parseInt(quantity, 10) }));
+    };
 
     const renderChickenItems = () => {
         if (!Array.isArray(chickenItems) || chickenItems.length === 0) {
@@ -56,10 +66,11 @@ const Chicken = () => {
                                 </Button>
                             </div>
                         </Link>
+                      
                         <div>
-                            <Button variant='tertiaryTwo' size='small'>
+                            <button onClick={() => handleAddToCart(item)} className='addToCartBtn'>
                                 Add to cart
-                            </Button>
+                            </button>
                         </div>
                     </div>
                 </div>

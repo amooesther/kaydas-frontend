@@ -4,15 +4,16 @@ import logo from '../../Assets/logo.png';
 import cart from '../../Assets/cart.png';
 import heart from '../../Assets/heart.png';
 import userAvatar from '../../Assets/userAvatar.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, db } from '../firebase';
 import { getDoc, doc } from 'firebase/firestore';
-import { useSelector } from 'react-redux'; // Import useSelector to access Redux store state
+import { useSelector } from 'react-redux'; 
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [userDetail, setUserDetail] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   // Get cart count from Redux store
   const cartCount = useSelector((state) => state.cart.cartItems.length);
@@ -52,6 +53,11 @@ const NavBar = () => {
     setMenuVisible(!menuVisible);
   };
 
+
+  const goToCart = () => {
+    navigate('/cart');
+  };
+
   return (
     <div className='navBar'>
       <div className='navLogo'>
@@ -88,10 +94,9 @@ const NavBar = () => {
         <Link to='/myorders'>
           <img src={heart} alt='cart' />
         </Link>
-        <div className='cartCount'>{cartCount}</div> {/* Display cart count */}
-        <Link to='./cart'>
-          <img src={cart} alt='cart' />
-        </Link>
+        <div className='cartCount'>{cartCount}</div>         
+          <img src={cart} alt='cart' onClick={goToCart}/>
+        
         <div className='cartCount'>{cartCount}</div> {/* Display cart count */}
         {userDetail ? (
           <div className='user'>
