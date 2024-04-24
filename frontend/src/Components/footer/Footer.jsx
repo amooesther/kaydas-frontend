@@ -5,6 +5,7 @@ import whatsapp from '../../Assets/whatsapp.png';
 import googlePlay from '../../Assets/googlePlay.png';
 import appleStore from '../../Assets/appleStore.png';
 import './Footer.css';
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -29,15 +30,15 @@ const Footer = () => {
           <div className='footerTwo'>
             <div className='footerColumn'>
               <h2>Account</h2>
-              <p>My Account</p>
-              <p>Order History</p>
-              <p>Cart</p>
+              <Link to="/profile" style={{ textDecoration: 'none', color:"white" }} ><p>My Account</p></Link>
+              <Link to="/myorders" style={{ textDecoration: 'none', color:"white" }} >  <p>Order History</p></Link>
+              <Link to="/cart" style={{ textDecoration: 'none', color:"white" }} ><p>Cart</p></Link>
               <p>Checkout</p>
-              <p>Shop</p>
+              <Link to="/gallery" style={{ textDecoration: 'none', color:"white" }} > <p>Shop</p></Link>
             </div>
             <div className='footerColumn'>
               <h2>Quick Links</h2>
-              <p>About</p>
+         <Link to="/aboutUs"style={{ textDecoration: 'none', color:"white" }} > <p>About</p></Link>
               <p>Blog</p>
               <p>How it works</p>
               <p>Referrals</p>
@@ -46,7 +47,7 @@ const Footer = () => {
             <div className='footerColumn'>
               <h2>Support</h2>
               <p>FAQS</p>
-              <p>Contact</p>
+              <Link to="/contactUs"style={{ textDecoration: 'none', color:"white" }} ><p>Contact</p></Link>
               <p>Help</p>
               <p>Track order</p>
             </div>

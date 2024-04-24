@@ -15,10 +15,11 @@
 .itemWrap{
 width: 220px !important;
 height: auto;
-border: 0.1px solid #aaa8a8; 
 border-radius: 8px;
 padding: 5px;
 margin-bottom: 50px;
+border: 1px solid #e7e7e7 !important;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .itemWrap img{
     width: 60%;
@@ -26,13 +27,20 @@ margin-bottom: 50px;
     padding: 5px;
     
 }
-.itemOne{
-   
+.itemOne{   
     display: flex;
-    height: 30px;
-    border: 0.1px solid #aaa8a8; 
+    height: 30px;  
+    border: none !important; 
     justify-content: space-between;
     align-items: center;
+}
+.border{
+    width: 220px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.borderTwo{
+    height: 55px ;
+    border-left: 1px solid #d8d8d8;
 }
 .itemOne div{
     font-size: 8px;
@@ -41,13 +49,11 @@ margin-bottom: 50px;
 }
 .itemCard{
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between;   
     color: #121212;
-    font: 10px;
-    border: 0.1px solid #aaa8a8; 
-    margin-left: 20px;
-    margin-top: 10px;
+    font: 10px;  
+    border: none !important;  
+    margin-left: 20px;   
     padding: 5px;
 }
 .itemCard span{

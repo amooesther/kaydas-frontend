@@ -45,19 +45,23 @@ const Chicken = () => {
                 <div>
                     <h3>{item.name}</h3>
                     <div className='itemOne'>
-                        <div>Weight</div>
                         <div>20kg</div>
+                        <div>stone code</div>
                     </div>
+                  <div className='border'></div>
                     <div className='itemCard'>
                         <div>
-                            <p>{item.type}</p>
+                            <p>{item.type}</p>                            
                             <span>Type</span>
                         </div>
+                        <div className='borderTwo'></div>
                         <div>
                             <p>{item.price}</p>
                             <span>Price</span>
                         </div>
+                        
                     </div>
+                    <div className='border'></div>
                     <div className='btnWrapper'>
                         <Link to={`/description/${item.id}`}>
                             <div>

@@ -42,16 +42,20 @@ const Wholesale = () => {
             <div>Weight</div>
             <div>20kg</div>
           </div>
+          <div className='border'></div>
           <div className='itemCard'>
             <div>
               <p>{item.type}</p>
               <span>Type</span>
             </div>
+            <div className='borderTwo'></div>
             <div>
               <p>{item.price}</p>
               <span>Price</span>
             </div>
-          </div>
+          </div>  
+          <div className='border'></div>
+
           <div className='btnWrapper'>
             <Link to={`/description/${item.id}`}>
               <div>

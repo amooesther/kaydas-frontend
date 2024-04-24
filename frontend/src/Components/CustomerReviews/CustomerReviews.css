@@ -4,10 +4,11 @@
     font-weight: 600;
     font: 35px;
     text-align: center; 
+    width: 90vw;
   
 }
 .customer{
-    width: 100vw;
+    width: 90vw;
     height: 85px;
     
 
@@ -23,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 405px;
+    gap: 305px;
     
 }
 
@@ -31,14 +32,16 @@
 hr{
     margin-top: 20px;
     border:1px solid #360AFF;
+    width: 90vw;
 }
 .reviews{
     display: flex;
+    width: 90vw;
 }
 
 .firstReview{
     display: flex;
-    width: 900px;
+    width: 700px;
     height: 300px;
     gap: 44px;
     border: 1px solid #e9e6ff ;
@@ -46,7 +49,7 @@ hr{
     align-items: center;
 }
 .reviewText{
-    width: 290px;
+    width: 280px;
 }
 .reviewText p{
     color: #360AFF;
@@ -62,7 +65,7 @@ hr{
     font-weight: 700;
 }
 .aboutUs{
-    width: 1080px;
+    width: 1000px;
 }
 .aboutUS h1{
     font-size: 35px;
@@ -75,19 +78,19 @@ hr{
 }
 .aboutOne{
     display: flex;
-    gap: 350px;
+    gap: 250px;
     justify-content: center;
     align-items: center;
 }
 .about{
-    width: 442px;
+    width: 400px;
 }
 .about h2{
     color: #360AFF;
 }
 .aboutTwo{
     display: flex;
-    gap: 350px;
+    gap: 250px;
     justify-content: center;
     align-items: center
 }
