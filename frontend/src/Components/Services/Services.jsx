@@ -13,7 +13,7 @@ const Services = () => {
         <div className='serviceOne'>
            <div className='serviceUp'> 
             <h1>Our services</h1>
-            <p>Kaydas cold room prioritizes customer's satisfaction over every other things</p>
+         <div className='upperText'> <p>Kaydas cold room prioritizes customer's satisfaction over every other things</p></div>  
          <button className='btnServices'>Learn more</button></div>
          </div>
          <div className='serviceTwo'>

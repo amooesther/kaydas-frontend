@@ -86,6 +86,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       
         font-size: 17px;
        
+       
     
     }
 }
@@ -115,13 +116,16 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 480px) {
     .itemWrap {
-        width: 100%; 
+        width: 90%; 
     }
     .itemWrapper {
         display: grid;
         grid-template-columns: repeat( auto-fill, minmax(220px, 1fr));
         gap: 2px;
-        margin-left: 80px; 
+        margin-left: 40px; 
+    }
+    .cartCards h2{
+        margin-right: 250px;
     }
 }
 

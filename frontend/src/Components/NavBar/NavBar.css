@@ -121,7 +121,7 @@ width: auto !important;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: calc(5% ); 
+    top: calc(8% ); 
     Right: 1px;
     background-color: #f6f5ff;
     width: 100px; 
@@ -136,7 +136,8 @@ width: auto !important;
     display: block;
     cursor: pointer;
     padding: 10px;
-    
+   
+    position: relative;
   }
 
   .toggleButton span {
@@ -167,7 +168,10 @@ width: auto !important;
     display: none;
   }
   .userBtn{
+    
+    width: auto;
     display: block;
+
       }
     
   
@@ -178,7 +182,7 @@ width: auto !important;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: calc(5%); 
+    top: calc(8%); 
     right: 75px;
     background-color: #f6f5ff;
     width: 100px; 
@@ -233,7 +237,7 @@ display: block;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: calc(5% ); 
+    top: calc(8% ); 
     right: 3px;
     background-color: #f6f5ff;
     width: 100px; 
@@ -248,7 +252,7 @@ display: block;
     display: block;
     cursor: pointer;
     padding: 10px;
-    position: relative; 
+   
   }
 
   .toggleButton span {
@@ -277,14 +281,8 @@ display: block;
     font-size: 16px;
   }
 
-  .user button {
-    width: 90px;
-    font-size: 14px;
-  }
+ 
 
-  .navLogo p {
-    font-size: 22px;
-  }
 
   
 }
@@ -293,9 +291,12 @@ display: block;
   .toggleButton {
     display: block;
     cursor: pointer;
-    padding: 10px;
-    position: relative; 
-    top: 15px;
+    padding: 10px; 
+    position: relative;  
+    top: 5px;
+    left: 18px;
+    margin-left: 120px;
+   
   }
   
   .newLoginCart button {
@@ -308,7 +309,22 @@ display: block;
    height: 30px;
   }
   .userBtn{
-    display: block;
-      }
+     
+    max-width: 100px;
+    height: auto !important;
+  margin-right: 100px;
+    
+  
+  }
+  .navLogo img{
+    width: 120px;
+    margin-right: 15px;
+  }
+  .loginBtn{
+    margin-right: 55px;
+  }
+  .navBar{
+    width: 90%;
+  }
     
 }

@@ -14,11 +14,11 @@
    
    
   }
-  .serviceUp p{
-    width: 350px;
+  .upperText{
     font-size: 17px;
     font-weight: 500;
-    margin-left: 400px;
+   
+    
   }
 .btnServices{
     padding: 10px 20px;
@@ -45,7 +45,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 250px;
-    height: 260px;
+    height: 280px;
     border: 1px solid #360AFF;
     border-radius: 20px;
     padding: 20px;
@@ -109,6 +109,13 @@
   .serviceTwo p {
     font-size: 14px;
   }
+  .upperText{
+    
+    font-size: 17px;
+    font-weight: 500;  
+    width: 300px ;
+  margin-left: 20px;
+   }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {

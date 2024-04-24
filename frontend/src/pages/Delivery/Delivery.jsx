@@ -4,6 +4,7 @@ import NavBar from '../../Components/NavBar/NavBar.jsx';
 import arrowLeftBlue from '../../Assets/arrowLeftBlue.png';
 import deliveryImg from '../../Assets/deliveryImg.png';
 import Footer from '../../Components/footer/Footer.jsx'
+import { Link } from 'react-router-dom';
 
 const Delivery = () => {
   const [selectedValue, setSelectedValue] = useState("option1");
@@ -17,7 +18,7 @@ const Delivery = () => {
       <NavBar />
       <div className='deliveryWrap'>
         <div className='deliveryOne'>
-          <img src={arrowLeftBlue} alt="" />
+      <Link to='/'>    <img src={arrowLeftBlue} alt="" /></Link>
           <h1 className='heading'>Delivery status</h1>
         </div>
         <div className='deliveryMap'>

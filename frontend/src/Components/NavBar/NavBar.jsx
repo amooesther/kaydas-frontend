@@ -97,12 +97,12 @@ const NavBar = () => {
         <div className='cartCount'>{cartCount}</div>         
           <img src={cart} alt='cart' onClick={goToCart}/>
         
-        <div className='cartCount'>{cartCount}</div> {/* Display cart count */}
+        <div className='cartCount'>{cartCount}</div> 
         {userDetail ? (
           <div className='user'>
-            <div className='userAvatar'>
+          <Link to='/profile'> <div className='userAvatar'>
               <img src={userAvatar} alt='' />
-            </div>
+            </div></Link> 
             <button onClick={handleLogout} className='userBtn'>Hi {userDetail.Name}</button>
           </div>
         ) : (
