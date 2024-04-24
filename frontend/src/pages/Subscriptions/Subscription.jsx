@@ -63,7 +63,7 @@ const Subscription = () => {
       <div className='subOne'>
     <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <div className='btnWrapper'><Button>order Now</Button></div></Link> 
       <p>Gift Your Loved Ones</p>
-             <div className='subTwo'> <img src={redHeart} alt="" /> 11k+</div>
+             <div className='subTwo'> <img src={redHeart} alt="" /> <span>11k+</span></div>
       </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Subscription = () => {
       
       <div className='carouselWrap'>
       <Link  to='/gallery' style={{ textDecoration: 'none' }}><h2 className={currentSlide === 0 ? 'active' : ''}>Chicken</h2></Link>
-<img src={subOne} alt="" />
+<img src={subOne} alt="" className='subImg'/>
 <h3>Weekly</h3>
 <p>Schedule weekly orders at your convenience.
    saved all your favorite
@@ -90,7 +90,7 @@ const Subscription = () => {
       
       <div className='carouselWrap'>
       <Link  to='/gallery' style={{ textDecoration: 'none' }}> <h2 className={currentSlide === 1 ? 'active' : ''}>Fish</h2></Link>
-<img src={subTwo} alt="" />
+<img src={subTwo} alt="" className='subImg'/>
 <h3>Monthly</h3>
 <p>If weekly purchase is not convinient 
   stock up your store on a monthly
@@ -105,7 +105,7 @@ const Subscription = () => {
       </div>
       <div className='carouselWrap'>
       <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Whole</h2></Link>
-<img src={subThree} alt="" />
+<img src={subThree} alt=""  className='subImg'/>
 <h3>Random</h3>
 <p>You have the option to order at anytime and
    schedule your delivery. 
@@ -120,7 +120,7 @@ const Subscription = () => {
       </div>
       <div className='carouselWrap'>
       <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Chicken part</h2></Link>
-<img src={subFour} alt="" />
+<img src={subFour} alt="" className='subImg'/>
 <h3>Daily Orders</h3>
 <p>Your satisfaction is our priorityTaking the stress 
   of you whenever you crave favorite protein, 
@@ -139,7 +139,7 @@ const Subscription = () => {
       <button><img src={arrowUp} alt="" /></button>
       <button><img src={arrowUpTwo} alt="" /></button>
       </div>
-      <p>Need more information? Reach out to us!</p>
+      <p className='subp'>Need more information? Reach out to us!</p>
     </div>
     <Footer/>
     </div>

@@ -15,7 +15,7 @@ const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Get cart count from Redux store
+ 
   const cartCount = useSelector((state) => state.cart.cartItems.length);
 
   const fetchUserData = async () => {
