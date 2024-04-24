@@ -3,7 +3,6 @@
 .serviceWrapper {
    height: 1072px;
    width: 90vw;
-   background-color: #f6f5ff;;
    justify-content: center;
    align-items: center;
    margin: 50px auto;
@@ -11,11 +10,16 @@
   
   .serviceOne {
     text-align: center;
-    padding: 20px;
+  
    
    
   }
-  
+  .serviceUp p{
+    width: 350px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 400px;
+  }
 .btnServices{
     padding: 10px 20px;
     width: 166px;
@@ -24,8 +28,7 @@
     border: 1px solid #360AFF;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 20px;
-    margin-top: 20px;
+   margin-top: 10px;
     background-color: transparent;
 }
 
