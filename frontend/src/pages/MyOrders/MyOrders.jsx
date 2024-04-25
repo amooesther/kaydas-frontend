@@ -16,7 +16,7 @@ const MyOrders = () => {
     setIsSmallScreen(window.innerWidth <= 768); // Update state based on screen size
   };
 
-  // Listen for window resize events
+
   React.useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {

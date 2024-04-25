@@ -1,32 +1,32 @@
-import  { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux'; // Import useDispatch
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import NavBar from '../../Components/NavBar/NavBar.jsx';
 import arrowLeftBlue from '../../Assets/arrowLeftBlue.png';
 import heart from '../../Assets/heart.png';
 import location from '../../Assets/location.png';
 import clock from '../../Assets/clock.png';
 import './Description.css';
-import Button from '../../Components/Button/Button.jsx';
 import Footer from '../../Components/footer/Footer.jsx';
-import { Link, useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { fetchDetails } from '../../ApiRequests/details.js';
-import { addToCart } from '../../pages/Cart/CartSlice.js'; // Import addToCart action
+import { addToCart, incrementHeartCount, updateClickedProduct, addToHeart } from '../../pages/Cart/CartSlice.js'; // Import updateClickedProduct action
 
 const Description = () => {
   const { id: detailsId } = useParams();
-  const [details, setDetails] = useState(null); 
+  const [details, setDetails] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const dispatch = useDispatch(); 
-  const navigate = useNavigate(); 
+  const [heartClicked, setHeartClicked] = useState(false); // State to track heart button click
+  const [likedItems, setLikedItems] = useState([]); // State to store liked items
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchDetails(); 
+        const data = await fetchDetails();
         if (data && data.details) {
-          
           const product = data.details.find(item => item.id == detailsId);
-          setDetails(product); 
+          setDetails(product);
         } else {
           console.error('Data format or details not found:', data);
         }
@@ -35,8 +35,8 @@ const Description = () => {
       }
     };
 
-    fetchData(); 
-  }, [detailsId]); 
+    fetchData();
+  }, [detailsId]);
 
   const changeQuantity = ({ target: { value } }) => {
     setQuantity(value);
@@ -44,11 +44,26 @@ const Description = () => {
 
   const handleAddToCart = () => {
     if (details) {
-      console.log( "i am adding to cart")
       dispatch(addToCart({ ...details, quantity: parseInt(quantity, 10) }));
       navigate('/cart');
     }
+  };
+
+  const handleAddToHeart = () => {
+    if (details) {
+      dispatch(addToHeart(details)); // Dispatch the product itself
+    }
+    dispatch(incrementHeartCount());
+    dispatch(updateClickedProduct(details)); 
+    setHeartClicked(true); 
   
+   
+    setLikedItems(prevLikedItems => [...prevLikedItems, details]); 
+  
+    navigate('/myorderhistory', { state: { likedItems: [...likedItems, details] } });
+
+
+
   };
   
 
@@ -59,13 +74,13 @@ const Description = () => {
         <div className='descriptionLeft'>
           <div>
             <div className='descriptionLeftUp'>
-              <img src={arrowLeftBlue} alt="" />
+              <Link to="/gallery"><img src={arrowLeftBlue} alt="" /></Link>
               <p>Product details</p>
-              <img src={heart} alt="cart" />
+              <button className='heartBtn' onClick={handleAddToHeart}><img src={heart} alt="heart" /></button>
             </div>
             {details && (
               <>
-                <img src={details.imgSrc} alt={details.name} className='fish'/>
+                <img src={details.imgSrc} alt={details.name} className='fish' />
                 <h4>Product Description</h4>
                 <p className='descP'>{details.description}</p>
                 <span className='spanOne'>{details.type}</span>
@@ -78,15 +93,13 @@ const Description = () => {
                 <div className='descriptionLeftDown'>
                   <div>Quantity</div>
                   <button className=' descriptionDown' onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
-                  <div  className=' descriptionDownOne'>{quantity}</div>
+                  <div className=' descriptionDownOne'>{quantity}</div>
                   <button className=' descriptionDown' onClick={() => setQuantity(quantity + 1)}>+</button>
                 </div>
               </>
             )}
             <div className='descBtn'>
-      
-        <button onClick={handleAddToCart} className='cartBtn'>Add to Cart</button>
-      
+              <button onClick={handleAddToCart} className='cartBtn'>Add to Cart</button>
             </div>
           </div>
         </div>
@@ -104,8 +117,8 @@ const Description = () => {
             <span>No 6 jetty rd Abuloma portharcourt</span>
           </div>
           <div className='buttons'>
-            <Link to='/contactUs'><button className='buttOne'><img src={clock} alt="" /> ASAP</button></Link> 
-            <Link to='/contactUs'><button className='buttTwo'> <img src={clock} alt="" /> Schedule</button></Link> 
+            <Link to='/contactUs'><button className='buttOne'><img src={clock} alt="" /> ASAP</button></Link>
+            <Link to='/contactUs'><button className='buttTwo'> <img src={clock} alt="" /> Schedule</button></Link>
           </div>
         </div>
       </div>

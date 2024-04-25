@@ -55,6 +55,7 @@ const Cart = () => {
             cartItems.map((item, index) => (
               <div className='fullCart' key={index}>
                 <div className='fullCartImg'><img src={item.imgSrc} alt="" /></div>
+                
                 <div className='fullCartSpan'>
                   <span>{item.name}</span>
                   <span>In stock</span>

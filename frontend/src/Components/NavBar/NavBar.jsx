@@ -14,10 +14,10 @@ const NavBar = () => {
   const [userDetail, setUserDetail] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
-
  
   const cartCount = useSelector((state) => state.cart.cartItems.length);
-
+  const heartCount = useSelector((state) => state.cart.heartCount);
+  
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
@@ -52,7 +52,6 @@ const NavBar = () => {
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
-
 
   const goToCart = () => {
     navigate('/cart');
@@ -92,17 +91,19 @@ const NavBar = () => {
       </ul>
       <div className='newLoginCart'>
         <Link to='/myorders'>
-          <img src={heart} alt='cart' />
-        </Link>
-        <div className='cartCount'>{cartCount}</div>         
-          <img src={cart} alt='cart' onClick={goToCart}/>
         
+          <img src={heart} alt='heart' />
+        </Link>
+        <div className='cartCount'>{heartCount}</div>         
+        <img src={cart} alt='cart' onClick={goToCart} className='mainCart'/>
         <div className='cartCount'>{cartCount}</div> 
         {userDetail ? (
           <div className='user'>
-          <Link to='/profile'> <div className='userAvatar'>
-              <img src={userAvatar} alt='' />
-            </div></Link> 
+            <Link to='/profile'>
+              <div className='userAvatar'>
+                <img src={userAvatar} alt='' />
+              </div>
+            </Link> 
             <button onClick={handleLogout} className='userBtn'>Hi {userDetail.Name}</button>
           </div>
         ) : (

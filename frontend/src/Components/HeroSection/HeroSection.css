@@ -10,11 +10,14 @@
    margin-bottom: 0px;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
 }
 .heroText{
-   width: 70%;
+  
    margin: auto;
-   font-size: 40px;
+   font-size: 72px;
+   margin-bottom: 40px;
  
 }
 .heroText span{
@@ -30,6 +33,7 @@
    gap: 10px;
    margin: auto;
    padding-top: 20px;
+   
 }
 .searchWrapper input {
     width: 250px;
@@ -145,6 +149,7 @@
   
     .heroText {
       font-size: 30px;
+      width: 80%;
     }
   
     .inputWrapper {
