@@ -4,8 +4,9 @@ import success from '../../Assets/success.png'
 import Button from '../../Components/Button/Button.jsx'
 import { Link } from 'react-router-dom'
 import Footer from '../../Components/footer/Footer.jsx'
-
 import './PaymentSuccess.css'
+
+
 const PaymentSuccess = () => {
   return (
     <div >
@@ -15,7 +16,7 @@ const PaymentSuccess = () => {
         <div className='successPay'> 
             <h3>Payment Successful</h3>
             <p>Fund transfer to “kaydas coldroom” was successful</p>
-  <Link to="/receipt" style={{ textDecoration: 'none' }}><Button size='large'>View Receipt</Button></Link> 
+  <Link to="/receipt" style={{ textDecoration: 'none' }}><button className='paymentBttn'>View Receipt</button></Link> 
   </div>
         </div>
         <Footer/>

@@ -4,20 +4,21 @@ import logo from '../../Assets/logo.png';
 import cart from '../../Assets/cart.png';
 import heart from '../../Assets/heart.png';
 import userAvatar from '../../Assets/userAvatar.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'; // Changed Link to NavLink
 import { auth, db } from '../firebase';
 import { getDoc, doc } from 'firebase/firestore';
-import { useSelector } from 'react-redux'; 
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [userDetail, setUserDetail] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
- 
+  const location = useLocation(); 
+
   const cartCount = useSelector((state) => state.cart.cartItems.length);
   const heartCount = useSelector((state) => state.cart.heartCount);
-  
+
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
@@ -42,8 +43,8 @@ const NavBar = () => {
 
   const handleLogout = () => {
     auth.signOut().then(() => {
-      setUserDetail(null); 
-      window.location.href="/login"
+      setUserDetail(null);
+      window.location.href = "/login";
     }).catch((error) => {
       console.error("Error logging out:", error);
     });
@@ -69,47 +70,63 @@ const NavBar = () => {
       </div>
       <ul className={`navMenu ${menuVisible ? 'active' : ''}`}>
         <li>
-          <Link style={{ textDecoration: 'none' }} to='/'>
+          <NavLink
+            exact
+            to='/'
+            activeClassName="active" // Add activeClassName
+            style={{ textDecoration: 'none' }}
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link style={{ textDecoration: 'none' }} to='/aboutUs'>
+          <NavLink
+            to='/aboutUs'
+            activeClassName="active" // Add activeClassName
+            style={{ textDecoration: 'none' }}
+          >
             About Us
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link style={{ textDecoration: 'none' }} to='/contactUS'>
+          <NavLink
+            to='/contactUS'
+            activeClassName="active" // Add activeClassName
+            style={{ textDecoration: 'none' }}
+          >
             Contact US
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link style={{ textDecoration: 'none' }} to='/subscription'>
+          <NavLink
+            to='/subscription'
+            activeClassName="active" // Add activeClassName
+            style={{ textDecoration: 'none' }}
+          >
             Subscription
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <div className='newLoginCart'>
-        <Link to='/myorders'>
-        
+        <NavLink to='/myorders'>
           <img src={heart} alt='heart' />
-        </Link>
-        <div className='cartCount'>{heartCount}</div>         
-        <img src={cart} alt='cart' onClick={goToCart} className='mainCart'/>
-        <div className='cartCount'>{cartCount}</div> 
+        </NavLink>
+        <div className='cartCount'>{heartCount}</div>
+        <img src={cart} alt='cart' onClick={goToCart} className='mainCart' />
+        <div className='cartCount'>{cartCount}</div>
         {userDetail ? (
           <div className='user'>
-            <Link to='/profile'>
+            <NavLink to='/profile'>
               <div className='userAvatar'>
                 <img src={userAvatar} alt='' />
               </div>
-            </Link> 
+            </NavLink>
             <button onClick={handleLogout} className='userBtn'>Hi {userDetail.Name}</button>
           </div>
         ) : (
-          <Link to='./Login'>
-            <button  className='loginBtn'>Login</button>
-          </Link>
+          <NavLink to='./Login'>
+            <button className='loginBtn'>Login</button>
+          </NavLink>
         )}
       </div>
     </div>

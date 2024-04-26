@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Handle search form submission if needed
+   
   };
 
   return (

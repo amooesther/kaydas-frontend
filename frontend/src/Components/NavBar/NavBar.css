@@ -115,6 +115,14 @@ Link {
 font-size:14px !important;
 width: auto !important;
 }
+.navMenu li a.active {
+    color: #360aff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+
 /* Responsive styles */
 @media only screen and (max-width: 1024px) {
   .navMenu {
