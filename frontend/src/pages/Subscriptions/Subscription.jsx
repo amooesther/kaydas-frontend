@@ -18,28 +18,28 @@ import Footer from '../../Components/footer/Footer.jsx'
 
 
 const Subscription = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoplaying, setIsAutoplaying] = useState(true);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const [isAutoplaying, setIsAutoplaying] = useState(true);
 
-  useEffect(() => {
-    const autoplayInterval = setInterval(() => {
-      if (isAutoplaying) {
-        goToNextSlide();
-      }
-    }, 5000);
+  // useEffect(() => {
+  //   const autoplayInterval = setInterval(() => {
+  //     if (isAutoplaying) {
+  //       goToNextSlide();
+  //     }
+  //   }, 5000);
 
-    return () => clearInterval(autoplayInterval);
-  }, [currentSlide, isAutoplaying]);
+  //   return () => clearInterval(autoplayInterval);
+  // }, [currentSlide, isAutoplaying]);
 
-  const totalSlides = 4;
+  // const totalSlides = 4;
 
-  const goToNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-  };
+  // const goToNextSlide = () => {
+  //   setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+  // };
 
-  const goToPrevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
-  };
+  // const goToPrevSlide = () => {
+  //   setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+  // };
   return (
     <div>
       <NavBar/>
@@ -73,7 +73,7 @@ const Subscription = () => {
       
       
       <div className='carouselWrap'>
-      <Link  to='/gallery' style={{ textDecoration: 'none' }}><h2 className={currentSlide === 0 ? 'active' : ''}>Chicken</h2></Link>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}><h2 >Chicken</h2></Link>
 <img src={subOne} alt="" className='subImg'/>
 <h3>Weekly</h3>
 <p>Schedule weekly orders at your convenience.
@@ -89,7 +89,7 @@ const Subscription = () => {
       </div>
       
       <div className='carouselWrap'>
-      <Link  to='/gallery' style={{ textDecoration: 'none' }}> <h2 className={currentSlide === 1 ? 'active' : ''}>Fish</h2></Link>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}> <h2 >Fish</h2></Link>
 <img src={subTwo} alt="" className='subImg'/>
 <h3>Monthly</h3>
 <p>If weekly purchase is not convinient 
@@ -104,7 +104,7 @@ const Subscription = () => {
    </div>
       </div>
       <div className='carouselWrap'>
-      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Whole</h2></Link>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2>Whole</h2></Link>
 <img src={subThree} alt=""  className='subImg'/>
 <h3>Random</h3>
 <p>You have the option to order at anytime and
@@ -119,7 +119,7 @@ const Subscription = () => {
    </div>
       </div>
       <div className='carouselWrap'>
-      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Chicken part</h2></Link>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2>Chicken part</h2></Link>
 <img src={subFour} alt="" className='subImg'/>
 <h3>Daily Orders</h3>
 <p>Your satisfaction is our priorityTaking the stress 
